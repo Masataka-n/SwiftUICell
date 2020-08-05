@@ -63,7 +63,6 @@ import SwiftUI
         private func addContentView(_ contentView: Content) {
             guard let parentViewController = self.parentViewController else { return }
             let hostingViewController: UIViewController = UIHostingController(rootView: contentView.environmentObject(self.proxy))
-            parentViewController.addChild(hostingViewController)
             self.contentView.addSubview(hostingViewController.view)
             if let hostinView = hostingViewController.view {
                 hostinView.translatesAutoresizingMaskIntoConstraints = false
